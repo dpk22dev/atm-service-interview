@@ -21,8 +21,6 @@ public class PinController {
         pe.setAccountNumber(accountNumber);pe.setPin(pin);
         pinRepository.save( pe );
         return "ok";
-    }
-	
-	
+    }		
 	
 }
