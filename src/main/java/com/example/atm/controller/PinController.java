@@ -15,7 +15,7 @@ public class PinController {
 	private PinRepository pinRepository; 
 	
 	@GetMapping("/pin")
-    public String updatePin(@RequestParam(name="accountNumber", required=true, defaultValue="") String accountNumber, 
+    public String updatePin(@RequestParam(name="accountNumber", required=true, defaultValue="") Long accountNumber, 
     		@RequestParam(name="pin", required=true, defaultValue="") String pin) {
         PinEntity pe = new PinEntity();
         pe.setAccountNumber(accountNumber);pe.setPin(pin);

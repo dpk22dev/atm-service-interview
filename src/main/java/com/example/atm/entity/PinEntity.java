@@ -14,7 +14,7 @@ public class PinEntity {
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
-	private String accountNumber;
+	private Long accountNumber;
     private String pin;
     
     
@@ -23,13 +23,7 @@ public class PinEntity {
 	}
 	public void setId(Integer id) {
 		this.id = id;
-	}
-	public String getAccountNumber() {
-		return accountNumber;
-	}
-	public void setAccountNumber(String accountNumber) {
-		this.accountNumber = accountNumber;
-	}
+	}	
 	public String getPin() {
 		return pin;
 	}
@@ -41,5 +35,11 @@ public class PinEntity {
 	}*/
 	public void setPin(String pin) {
 		this.pin = pin;
+	}
+	public Long getAccountNumber() {
+		return accountNumber;
+	}
+	public void setAccountNumber(Long accountNumber) {
+		this.accountNumber = accountNumber;
 	}
 }

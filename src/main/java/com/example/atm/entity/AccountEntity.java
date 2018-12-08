@@ -1,5 +1,7 @@
 package com.example.atm.entity;
 
+import java.math.BigDecimal;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,27 +17,28 @@ public class AccountEntity {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 		
-	private String accountNumber;
-    private Long amount;
+	private Long accountNumber;
+	private BigDecimal amount;
     private Character transType;
+    
+    public Long getAccountNumber() {
+		return accountNumber;
+	}
+	public void setAccountNumber(Long accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+	public BigDecimal getAmount() {
+		return amount;
+	}
+	public void setAmount(BigDecimal amount) {
+		this.amount = amount;
+	}	
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
-	}
-	public String getAccountNumber() {
-		return accountNumber;
-	}
-	public void setAccountNumber(String accountNumber) {
-		this.accountNumber = accountNumber;
-	}
-	public Long getAmount() {
-		return amount;
-	}
-	public void setAmount(Long amount) {
-		this.amount = amount;
-	}
+	}	
 	public Character getTransType() {
 		return transType;
 	}
