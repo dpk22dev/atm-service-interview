@@ -1,5 +1,7 @@
 package com.example.atm.controller;
 
+import java.util.Random;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,4 +30,12 @@ public class AccountController {
 		return accountService.withdraw(accountNumber, amount);             
     }			
 	
+	/*
+	@PostMapping("/create")
+	public String createAccount() {
+		Random rl = new Random();
+		Long acc = rl.nextLong();
+		accountService.deposit(acc, 0);             
+    }		
+	*/
 }
